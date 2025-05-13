@@ -683,6 +683,11 @@ transform: translate(-50%,-50%);
 .social_list li a .nav_insta {
     color: #e4405f;
 }
+.social-button {
+    margin-left: 5px; /* Adds spacing to the left of the buttons */
+}
+    
+
 /* ---- End Social icon ---- */
 
 /*================== 03 End sidebar css ==================  */
@@ -1120,18 +1125,19 @@ transform: scale(1)!important;
     position: absolute;
     bottom: 0;
     background: #00c8da;
-    width: 60px;
-    height: 60px;
+    width: 40px; /* Reduced size */
+    height: 40px; /* Reduced size */
     text-align: center;
-    line-height: 60px;
+    line-height: 40px; /* Matches height for centering */
     color: #fff;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted font size */
     z-index: 2;
     cursor: pointer;
+    display: flex; /* Added for centering */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
 }
-.about_leftsection .iconbox {
-    position: relative;
-}
+
 .iconbox i {
     position: absolute;
     top: 22px;
@@ -1142,6 +1148,12 @@ transform: scale(1)!important;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+}
+.about_leftsection .iconbox i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .about_leftsection .iconbox i.icon_minus {
     opacity: 0;
@@ -1231,6 +1243,7 @@ span.value a {
     padding: 0;
     margin: 0;
     margin-top: 10px;
+    margin-left: 15px;
 }
 .personal_details ul.social-links li {
     display: inline-block;
