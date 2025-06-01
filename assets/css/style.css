@@ -3123,7 +3123,8 @@ h2.project_heading:after {
     border-left: 15px solid transparent;
     position: absolute;
     left: 38px;
-    top: -34px;
+    top: 113px;
+    transform: scaleY(-1); /* Flips upside down */
 }
 .education_box.secondbox .edu_mainyear h1:after {
     border-right-color:transparent; 
