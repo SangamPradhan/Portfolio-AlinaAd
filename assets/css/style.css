@@ -2024,8 +2024,29 @@ h2.project_heading:after {
 .port_testimonial_setions .testimonial_top_box .testimonial_img {
     border: 5px solid rgb(0, 200, 218);
     height: 484px;
+    width: 780px;
+    object-fit: cover;
 	overflow: hidden;
 }
+
+@media (max-width: 900px) {
+  .port_testimonial_setions .testimonial_top_box .testimonial_img {
+    width: 100%;
+    height: 350px;
+    max-width: 100vw;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .port_testimonial_setions .testimonial_top_box .testimonial_img {
+    width: 100%;
+    height: 350px;
+    max-width: 100vw;
+    max-height: 180px;
+  }
+}
+
 .port_testimonial_setions .port_test_data {
     max-width: 864px;
     margin: auto;
@@ -2967,8 +2988,14 @@ h2.project_heading:after {
 .bannner_leftpart .banner_name {
     margin-left: -7px;
 }
-.blogsidebar_wrapper .widget.search_widget {
-    margin-top: 30px;
+.blogsidebar_wrapper .widget.search_widget form {
+    position: relative;
+}
+.blogsidebar_wrapper .widget.search_widget .blog_searchicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ff517e;
 }
 .port_singleblog_wrapper {
     padding-bottom:50px;
@@ -3192,7 +3219,7 @@ p.banner_pera {
     text-align:left;
     margin-top: 15px;
 }
-.port_map_setions .map_box #world-map {
+.port_map_setions .map-container {
     height: 100%;
 }
 .port_testimonial_setions:after, .port_testimonial_setions:before {
@@ -3339,85 +3366,35 @@ h3.education_place {
 .port_map_setions .map-container {
     height: 225px;
 }
+.bannner_leftpart .banner_content {
+    padding-left: 0;
+}
+.bannner_leftpart h2.stranger {
+    font-size: 20px;
+}
+.bannner_leftpart h2.stranger:after {
+    width: 160px;
+}
 .bannner_leftpart .banner_name {
     font-size: 35px;
-	margin-bottom: 10px;
-	margin-left: 0;
-}
-.banner_typingtext {
-    font-size: 16px;
 }
 p.banner_pera {
     font-size: 16px;
 }
-.bannner_leftpart h2.stranger {
-    margin-bottom: 15px;
-}
-.blog_content blockquote {
-    padding:60px 15px 15px 15px;
-}
-.blog_content blockquote .blockquote_icon {
-    top: 15px;
-}
-.port_testimonial_setions .testimonial_details_box {
-    padding: 20px;
-}
-.port_contact_setions .port_contact_mainbox {
-    padding: 49px 20px 45px 20px;
-}
-.port_about_setions {
-    padding: 40px 0;
-}
+.banner_btn .portfolio_btn.btn_yellow {
+    margin-right: 5px;
 
-.education_section {
-    padding: 40px 0;
 }
-.education_section .port_heading_wrapper.text-center {
-    padding: 0px 0px 30px;
+.banner_img .brc_hirebtn {
+    right: 45px;
 }
-
-.port_progress_setions {
-    padding: 40px 0 0;
+.port_togglebox {
+    right: 20px;
+    top: 20px;
 }
-.port_progress_setions .circle canvas {
-    width: 150px!important;
-    height: 150px!important;
+.blog_comment .latest_comment.sub_replay {
+    margin-left: 15px;
 }
-.experience_section {
-    padding: 40px 0 20px;
-}
-.services_section {
-    padding: 40px 0px 0px;
-}
-.testimonial_section {
-    padding: 40px 0px 40px;
-}
-.blog_section {
-    padding: 40px 0px 10px;
-}
-.port_responsor_setions {
-    padding: 40px 0px;
-}
-.port_contact_wrapper {
-    padding: 40px 0px 0;
-}
-.port_footer_setions .copy_right_wrapper {
-    margin-top: 35px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 @media (max-width:380px) {
 .right_section h2.about_tophead {
@@ -3479,4 +3456,3 @@ p.banner_pera {
     margin-left: 15px;
 }
 }
-/*  ================== 20 End media query css ==================  */
