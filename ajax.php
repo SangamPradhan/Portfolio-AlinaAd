@@ -43,8 +43,18 @@ try {
 	$mail->addAddress($_ENV['SMTP_TO_EMAIL'], $_ENV['SMTP_TO_NAME']);
 
 	$mail->Subject = $subject;
-	$mail->Body    = $message;
-	$mail->AltBody = strip_tags($message);
+	$mail->isHTML(true); // Send email as HTML
+
+	$mail->Body = "
+	<h2>New Contact Message from Portfolio</h2>
+	<p><strong>Name:</strong> {$fullName}</p>
+	<p><strong>Email:</strong> {$email}</p>
+	<p><strong>Subject:</strong> {$subject}</p>
+	<p><strong>Message:</strong><br>" . nl2br(htmlspecialchars($message)) . "</p> 
+	";
+
+	$mail->AltBody = "Name: {$fullName}\nEmail: {$email}\nSubject: {$subject}\nMessage:\n{$message}";
+
 
 	$mail->send();
 
